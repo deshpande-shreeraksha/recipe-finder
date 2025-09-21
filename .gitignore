@@ -1,0 +1,4 @@
+.env
+api/config.js
+node_modules/
+dist/
