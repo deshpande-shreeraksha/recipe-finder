@@ -249,3 +249,39 @@ footer a:hover {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+/* Container for favorite recipes */
+.favorites-container {
+  display: flex;               /* Aligns child elements horizontally */
+  flex-wrap: wrap;             /* Allows wrapping of cards if they overflow */
+  justify-content: center;     /* Centers the cards horizontally */
+  gap: 20px;                   /* Adds space between cards */
+  padding: 20px;
+}
+
+/* Individual recipe card */
+.favorite-card {
+  width: 250px;                /* Sets a fixed width for each card */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;          /* Centers text inside the card */
+}
+/* Container for favorite recipes */
+.favorites-container {
+  display: flex;               /* Aligns child elements horizontally */
+  flex-wrap: wrap;             /* Allows wrapping of cards if they overflow */
+  justify-content: center;     /* Centers the cards horizontally */
+  gap: 20px;                   /* Adds space between cards */
+  padding: 20px;
+}
+
+/* Individual recipe card */
+.favorite-card {
+  width: 250px;                /* Sets a fixed width for each card */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;          /* Centers text inside the card */
+}

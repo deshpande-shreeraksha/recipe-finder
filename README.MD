@@ -14,4 +14,5 @@ Discover recipes based on ingredients you already have. Reduce food waste and ma
 
 ## Setup
 1. Clone the repo
-2. Create a `.env` file with your Spoonacular API key:
+2. Create a `config.js` file with your Spoonacular API key:
+
