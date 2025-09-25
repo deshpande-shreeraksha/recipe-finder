@@ -250,33 +250,24 @@ footer a:hover {
   line-height: 1.6;
 }
 
+/* Container for all favorites */
 #favoritesList {
   display: flex;
-  flex-direction: row;    /* Arrange side by side */
-  justify-content: center; /* Center horizontally */
+  flex-direction: row;       /* side by side */
+  justify-content: center;   /* center horizontally */
   align-items: flex-start;
-  gap: 20px;              /* Space between cards */
-  flex-wrap: wrap;        /* ⬅️ Use wrap if you want them to go to next line on smaller screen */
+  gap: 20px;                 /* spacing between cards */
+  flex-wrap: wrap;           /* cards wrap on small screens */
   padding: 20px;
 }
 
-.favorite-card {
-  flex: 0 0 auto;
-  width: 250px;
+/* Each direct child of favoritesList (the recipe card) */
+#favoritesList > * {
+  flex: 0 0 250px;           /* fixed width for consistency */
   border: 1px solid #ccc;
   border-radius: 10px;
   background: #fff;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-
-.favorite-card {
-  flex: 0 0 auto;        /* Prevent shrinking */
-  width: 250px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background: #fff;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px;
 }
