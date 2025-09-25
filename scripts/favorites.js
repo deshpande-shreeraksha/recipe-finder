@@ -29,7 +29,7 @@ function removeFavorite(id) {
 }
 function loadFavorites() {
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  const container = document.getElementById("favoritesContainer");
+  const container = document.getElementById("favorites-container");
 
   favorites.forEach(recipe => {
     const card = document.createElement("div");
