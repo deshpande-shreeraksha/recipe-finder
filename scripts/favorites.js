@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const favoritesList = document.getElementById("favoritesList");
-  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
   if (favorites.length === 0) {
     favoritesList.innerHTML = "<p>No favorites yet. Go find something tasty!</p>";
@@ -25,21 +25,5 @@ function removeFavorite(id) {
   let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   favorites = favorites.filter(recipe => recipe.id !== id);
   localStorage.setItem("favorites", JSON.stringify(favorites));
-  location.reload(); // Refresh to update the list
+  location.reload(); // refresh list
 }
-function loadFavorites() {
-  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  const container = document.getElementById("favorites-container");
-
-  favorites.forEach(recipe => {
-    const card = document.createElement("div");
-    card.className = "recipe-card";
-    card.innerHTML = `
-      <img src="${recipe.image}" alt="${recipe.title}" />
-      <h3>${recipe.title}</h3>
-    `;
-    container.appendChild(card);
-  });
-}
-
-document.addEventListener("DOMContentLoaded", loadFavorites);
