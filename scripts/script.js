@@ -1,6 +1,4 @@
-const API_KEY = "828f9ddd8b6b4b80b36a1fb59389e09c"; // Replace with your real key
-
-
+const API_KEY = "828f9ddd8b6b4b80b36a1fb59389e09c";
 const flavorQuotes = [
   "Flavor is a journey, not a destination.",
   "Every spice tells a story—let your dish speak.",
@@ -11,7 +9,6 @@ const flavorQuotes = [
   "Let your ingredients dance, not compete.",
   "A pinch of love makes every dish divine."
 ];
-
 function showFlavorQuote() {
   const quoteEl = document.getElementById("flavorQuote");
   if (quoteEl) {
@@ -19,14 +16,12 @@ function showFlavorQuote() {
     quoteEl.textContent = flavorQuotes[randomIndex];
   }
 }
-
 function showLoader(show) {
   const loader = document.getElementById("loader");
   if (loader) {
     loader.classList.toggle("hidden", !show);
   }
 }
-
 async function findRecipes() {
   const input = document.getElementById("ingredientInput").value.trim();
   if (!input) {
@@ -54,7 +49,6 @@ async function findRecipes() {
     showLoader(false);
   }
 }
-
 function displayRecipes(recipes) {
   const resultsContainer = document.getElementById("results");
   resultsContainer.innerHTML = "";
@@ -73,7 +67,6 @@ function displayRecipes(recipes) {
     resultsContainer.appendChild(card);
   });
 }
-
 function saveToFavorites(recipe) {
   let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   favorites.push(recipe);
