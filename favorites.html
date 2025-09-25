@@ -6,16 +6,31 @@
   <title>FOODVERSE Favorites</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-  #favoritesList {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 20px !important;
-  }
-</style>
+    /* Force horizontal layout */
+    #favoritesList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .recipe-card {
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .recipe-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Navbar -->
   <nav class="navbar combined-header">
     <div class="nav-left">
       <div class="nav-logo">💜</div>
@@ -26,11 +41,10 @@
     </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="favorites.html" class="active">Favorites</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
     </ul>
   </nav>
 
-  <!-- Main Content -->
   <main>
     <section class="favorite-container">
       <h2>💾 Your Saved Recipes</h2>
@@ -38,13 +52,10 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>Made with 💜 by FOODVERSE</p>
     <p>
-      <a href="https://spoonacular.com/food-api" target="_blank" rel="noopener">
-        Powered by Spoonacular API
-      </a>
+      <a href="https://spoonacular.com/food-api" target="_blank" rel="noopener">Powered by Spoonacular API</a>
     </p>
   </footer>
 
